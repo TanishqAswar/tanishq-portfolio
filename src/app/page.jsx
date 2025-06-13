@@ -577,7 +577,10 @@ export default function Page() {
         </section>
 
         {/* Contact Section */}
-        <section id='connect'  className='py-20 px-4 bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm'>
+        <section
+          id='connect'
+          className='py-20 px-4 bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm'
+        >
           <div className='max-w-4xl mx-auto text-center'>
             <h2 className='text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent'>
               📫 Connect with Me
@@ -602,7 +605,7 @@ export default function Page() {
               </a>
 
               <a
-                href='https://www.linkedin.com/in/TanishqAswar/'
+                href='https://www.linkedin.com/in/tanishq-aswar-04515928a/'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-400/30 rounded-2xl p-6 hover:scale-105 transition-all duration-300 group'
