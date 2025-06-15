@@ -18,6 +18,36 @@ export default function Page() {
     }
   }
 
+  const fullText = '🙏 Hare Krishna'
+  const [typedText, setTypedText] = useState('')
+  const [showCursor, setShowCursor] = useState(true)
+
+  useEffect(() => {
+    // Typing animation effect
+    const typeText = () => {
+      let currentIndex = 0
+      const typingInterval = setInterval(() => {
+        if (currentIndex <= fullText.length) {
+          setTypedText(fullText.slice(0, currentIndex))
+          currentIndex++
+        } else {
+          clearInterval(typingInterval)
+          // After typing is complete, continue blinking cursor for a bit then hide it
+          setTimeout(() => {
+            setShowCursor(false)
+          }, 3000) // Show cursor for 3 more seconds after typing
+        }
+      }, 150) // 150ms delay between each character
+    }
+
+    // Start typing animation after a short delay
+    const startTyping = setTimeout(typeText, 1000)
+
+    return () => {
+      clearTimeout(startTyping)
+    }
+  }, [])
+
   useEffect(() => {
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(
@@ -205,6 +235,23 @@ export default function Page() {
         </div>
       </div>
 
+      {/* CSS for blinking cursor */}
+      <style jsx>{`
+        @keyframes blink {
+          0%,
+          50% {
+            opacity: 1;
+          }
+          51%,
+          100% {
+            opacity: 0;
+          }
+        }
+        .blink {
+          animation: blink 1s infinite;
+        }
+      `}</style>
+
       {/* Main Content */}
       <div
         className={`relative z-10 transition-all duration-1000 ${
@@ -230,7 +277,12 @@ export default function Page() {
                   </div>
                 </div>
                 <h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-600 bg-clip-text text-transparent mb-4 relative z-10'>
-                  🙏 Hare Krishna
+                  {typedText}
+                  {(
+                    <span className='blink md:text-8xl bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-600 bg-clip-text text-transparent mb-4 relative z-10'>
+                      |
+                    </span>
+                  )}
                 </h1>
               </div>
 
