@@ -237,7 +237,7 @@ export default function Page() {
               {/* Peacock feather decorative line */}
               <div className='flex items-center justify-center mb-6'>
                 <div className='w-8 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-2'></div>
-                <div className='w-24 h-1 bg-gradient-to-r from-orange-400 to-yellow-400'></div>
+                <div className='w-44 h-1 bg-gradient-to-r from-orange-400 to-yellow-400'></div>
                 <div className='w-8 h-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full ml-2'></div>
               </div>
               <h2 className='text-3xl md:text-5xl font-semibold text-blue-200 mb-4'>
@@ -270,7 +270,7 @@ export default function Page() {
         </div>
 
         {/* Projects Section */}
-        <section id='creations' className='py-20 px-4'>
+        <section id='creations' className='py-20 px-4 mt-4'>
           <div className='max-w-6xl mx-auto'>
             <h2 className='text-4xl md:text-5xl font-bold text-center mb-16 relative'>
               <div
@@ -480,7 +480,7 @@ export default function Page() {
               <div className='text-center'>
                 <div className='mb-6'>
                   <h3 className='text-2xl font-bold text-cyan-400 mb-3'>
-                    Axios — InfoSec Wing
+                    Axios — InfoSec Wing Member
                   </h3>
                   <p className='text-xl text-blue-200 mb-4'>
                     <strong>IIIT Lucknow</strong>
