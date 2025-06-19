@@ -278,11 +278,11 @@ export default function Page() {
                 </div>
                 <h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-600 bg-clip-text text-transparent mb-4 relative z-10'>
                   {typedText}
-                  {(
+                  {
                     <span className='blink md:text-8xl bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-600 bg-clip-text text-transparent mb-4 relative z-10'>
                       |
                     </span>
-                  )}
+                  }
                 </h1>
               </div>
 
@@ -300,7 +300,8 @@ export default function Page() {
               </p>
               <p className='text-lg md:text-xl text-gray-400 leading-relaxed'>
                 Sophomore@IIIT Lucknow • Full Stack Developer • InfoSec
-                Enthusiast • CGPA: 8.48/10
+                Enthusiast
+                {/* <br/> • Reliance Foundation Scholar  */}• CGPA: 8.48/10
               </p>
             </div>
 
@@ -458,7 +459,10 @@ export default function Page() {
               </span>
             </h2>
 
-            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <div
+              className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center'
+              style={{ justifyContent: 'center' }}
+            >
               {[
                 {
                   icon: '💻',
@@ -480,16 +484,28 @@ export default function Page() {
                 },
                 {
                   icon: '🌟',
-                  title: 'Hacktoberfest',
+                  title: 'Hacktoberfest 2024',
                   desc: 'Open Source Contributor',
                   color: 'from-green-500 to-teal-500',
+                },
+                {
+                  icon: '🎓',
+                  title: 'Reliance Foundation Scholar',
+                  desc: 'Merit-based Scholarship',
+                  color: 'from-purple-500 to-pink-500',
+                },
+                {
+                  icon: '🧠',
+                  title: '500+ Problems Solved',
+                  desc: 'Across Multiple Platforms',
+                  color: 'from-cyan-500 to-blue-500',
                 },
               ].map((achievement, index) => (
                 <div
                   key={index}
-                  className={`bg-gradient-to-br ${achievement.color} p-1 rounded-2xl transform hover:scale-105 transition-all duration-300`}
+                  className={`bg-gradient-to-br ${achievement.color} p-1 rounded-2xl transform hover:scale-105 transition-all duration-300 h-48 w-84`}
                 >
-                  <div className='bg-gray-900/80 backdrop-blur-lg rounded-2xl p-6 h-full text-center'>
+                  <div className='bg-gray-900/80 backdrop-blur-lg rounded-2xl p-6 h-full w-full text-center flex flex-col justify-center items-center'>
                     <div className='text-4xl mb-3'>{achievement.icon}</div>
                     <h3 className='text-xl font-bold text-white mb-2'>
                       {achievement.title}
