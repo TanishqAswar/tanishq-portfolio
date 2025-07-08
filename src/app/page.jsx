@@ -407,6 +407,33 @@ export default function Page() {
                 </div>
               </div>
 
+              <div className='bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-lg rounded-2xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300 transform hover:scale-105'>
+                <div className='mb-4'>
+                  <h3 className='text-2xl font-bold text-green-400 mb-2'>
+                    LeetVSCode
+                  </h3>
+                  <p className='text-gray-300 leading-relaxed'>
+                    A browser extension that lets you extract LeetCode problems
+                    and generate minimal driver code to solve them directly in
+                    your own IDE like VS Code. Supports multiple platforms and
+                    enables full flexibility with local testing.
+                  </p>
+                </div>
+                <div className='flex gap-4 mt-6'>
+                  <a
+                    href='https://github.com/TanishqAswar/LeetVSCode'
+                    className='border border-green-400 text-green-400 hover:bg-green-400 hover:text-white px-4 py-2 rounded-lg transition-all duration-300'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    💻 GitHub
+                  </a>
+                  <span className='bg-blue-500/20 text-blue-400 px-4 py-2 rounded-lg'>
+                    🔧 Browser Extension
+                  </span>
+                </div>
+              </div>
+
               <div className='bg-gradient-to-br from-green-900/50 to-teal-900/50 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30 hover:border-green-400/50 transition-all duration-300 transform hover:scale-105'>
                 <div className='mb-4'>
                   <h3 className='text-2xl font-bold text-yellow-400 mb-2'>
