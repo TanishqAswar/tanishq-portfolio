@@ -493,8 +493,8 @@ export default function Page() {
               {[
                 {
                   icon: '💻',
-                  title: 'Codeforces Pupil',
-                  desc: 'Max Rating: 1266',
+                  title: 'Codeforces Specialist',
+                  desc: 'Max Rating: 1455',
                   color: 'from-blue-500 to-purple-500',
                 },
                 {
